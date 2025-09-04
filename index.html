@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Sistema de Cadastro de Clientes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho com título e descrição -->
+    <header>
+        <div class="container">
+            <h1>Cadastro de Clientes</h1>
+            <p class="subtitle">Sistema de gerenciamento com persistência em nuvem</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Área para exibir mensagens de alerta -->
+        <div id="alertBox" class="alert"></div>
+
+        <!-- Formulário para adicionar/editar clientes -->
+        <div class="card">
+            <h2>Adicionar Novo Cliente</h2>
+            <form id="clientForm">
+                <div class="form-group">
+                    <label for="name">Nome completo</label>
+                    <input type="text" id="name" required placeholder="Digite o nome completo">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" required placeholder="Digite o e-mail">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Telefone</label>
+                    <input type="tel" id="phone" required placeholder="Digite o telefone">
+                </div>
+
+                <button type="submit" id="submitBtn">Cadastrar Cliente</button>
+            </form>
+        </div>
+
+        <!-- Seção para listar clientes cadastrados -->
+        <h2>Clientes Cadastrados</h2>
+        <div id="clientsList">
+            <div class="loading">
+                <div class="spinner"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
